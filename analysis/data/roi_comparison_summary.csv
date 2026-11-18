@@ -1,0 +1,4 @@
+Benchmark,LLBP-X vs LLBP (%),LLBP-X vs TAGE-SC-L (%),Threshold9 MPKI Increase (%)
+Kafka,5.6162,19.8231,0.4762
+TPCC,2.6934,13.5152,0.087
+NodeApp,2.6613,25.2945,0.1363

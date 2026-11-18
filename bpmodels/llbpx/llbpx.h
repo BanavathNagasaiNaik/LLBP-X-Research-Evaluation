@@ -646,6 +646,23 @@ class LLBPXTSCL64k : public LLBPX {
             })
     {}
 };
+// Experimental variant: higher confidence adaptation threshold.
+class LLBPXTSCL64kThreshold9 : public LLBPX {
+public:
+    LLBPXTSCL64kThreshold9(void)
+        : LLBPX(LLBPXConfig
+            {
+                .tsclConfig = TSCLConfig
+                {
+                    .tageConfig = Tage64kConfig,
+                    .useSC = true,
+                    .useLoop = true
+                },
+                .adaptThreshold = 9,
+                .simulateTiming = false,
+            })
+    {}
+};
 
 
 // The LLBP predictor with simulating the prefetch latency.

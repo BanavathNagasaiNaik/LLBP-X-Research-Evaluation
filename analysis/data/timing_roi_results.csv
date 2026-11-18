@@ -1,0 +1,7 @@
+Benchmark,Model,ROI Instructions,ROI Mispredictions,ROI MPKI
+Kafka,llbp-timing,199999996,47203,0.236015
+Kafka,llbpx-timing,199999996,45111,0.225555
+TPCC,llbp-timing,200000000,666818,3.33409
+TPCC,llbpx-timing,200000000,639151,3.195755
+NodeApp,llbp-timing,200000003,667327,3.336635
+NodeApp,llbpx-timing,200000003,646716,3.23358

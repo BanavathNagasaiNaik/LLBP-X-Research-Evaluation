@@ -19,3 +19,22 @@ gem5/
 
 *.pred
 *.gz
+
+# Local Python and temporary files
+__pycache__/
+*.pyc
+*.pyo
+*.py:Zone.Identifier
+*:Zone.Identifier
+*_backup.py
+*_before_*.py
+*_before_*.md
+.venv/
+venv/
+.env
+*.log
+
+# Research backup artifacts
+documentation/report/backups/
+documentation/report/*_backup_*.md
+documentation/presentation/*_Backup.pptx

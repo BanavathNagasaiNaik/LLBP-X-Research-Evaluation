@@ -1,0 +1,80 @@
+LLBP-X RESEARCH PROJECT
+STEP 8: EXPERIMENTAL EVALUATION SUMMARY
+
+1. EXPERIMENTAL SETUP
+
+Simulator: LLBP-X branch predictor simulator
+Benchmarks:
+- Kafka
+- BenchBase TPCC
+- NodeApp
+
+Timing-aware predictor models:
+- llbp-timing
+- llbpx-timing
+
+Warmup instructions: 100,000,000
+Measurement instructions: 200,000,000
+BTB simulation: Enabled
+
+2. TIMING-AWARE RESULTS
+
+Benchmark   LLBP MPKI   LLBP-X MPKI   Reduction
+Kafka       0.236015    0.225555      4.43%
+TPCC        3.334090    3.195755      4.15%
+NodeApp     3.336635    3.233580      3.09%
+
+3. AVERAGE RESULTS
+
+Mean LLBP MPKI: 2.302247
+Mean LLBP-X MPKI: 2.218297
+
+Arithmetic mean of individual MPKI reductions: 3.89%
+MPKI reduction calculated from mean MPKIs: 3.65%
+
+4. ADDITIONAL EXPERIMENTS
+
+Zero-latency models evaluated:
+- tage64kscl
+- llbp
+- llbpx
+- llbpx-threshold9
+
+Measurement instructions: 100,000,000
+
+Average LLBP-X improvement over LLBP:
+3.66% (mean of per-benchmark percentage reductions)
+
+The threshold-9 variant produced slightly higher MPKI
+than the default LLBP-X on all three tested benchmarks.
+
+5. EVALUATION LIMITATIONS
+
+- Only 3 of the official 14 benchmarks were evaluated.
+- Timing-aware and zero-latency experiments used
+  different measurement lengths.
+- Results should not be described as an exact
+  reproduction of the complete paper evaluation.
+- The official notebook uses TAGE-SC-L 64K as the
+  reference predictor for its MPKI reduction graph.
+- The official notebook's Mean row uses reduction
+  calculated from mean MPKI values.
+
+6. GENERATED GRAPHS
+
+graph1_roi_mpki_comparison.png
+graph2_roi_llbpx_improvement.png
+graph3_roi_threshold_sensitivity.png
+graph4_timing_mpki.png
+graph5_timing_improvement.png
+graph6_timing_misses_saved.png
+
+CONCLUSION
+
+Across the three tested workloads, timing-aware
+LLBP-X achieved lower ROI MPKI than timing-aware
+LLBP. The average per-workload reduction was 3.89%,
+while the reduction of mean MPKIs was 3.65%.
+
+These results support the effectiveness of LLBP-X
+on the evaluated workload subset.
