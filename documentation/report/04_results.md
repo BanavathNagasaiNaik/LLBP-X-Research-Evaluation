@@ -145,7 +145,7 @@ The experimental trend supports the paper's central finding that LLBP-X can impr
 | Spring | 3.58 | 3.66399 | +2.3% |
 | Tomcat | 3.40 | 3.74330 | +10.1% |
 
-*Paper values in Table 4.7 are reference values transcribed during the project review from Table I of the original research paper. Verify the transcription against the paper before final submission. The difference column is `(Project - Paper) / Paper × 100`; it is a comparison of measured MPKI, not a speedup.*
+*Paper values in Table 4.7 are reference values transcribed during the project review from Table I of the original research paper. These reference values have been verified against Table I of the original HPCA 2026 paper, "The Last-Level Branch Predictor Revisited" (DOI: 10.1109/HPCA68181.2026.11408567). The difference column is `(Project - Paper) / Paper × 100`; it is a comparison of measured MPKI, not a speedup.*
 
 The published study evaluates **14 workloads** and reports broader aggregate results. This project covers **five** of those workloads, and the zero-latency measurement window used here is **100 million instructions**, rather than the **200 million ROI instructions** used in the paper's reported evaluation. Consequently, the two studies' absolute MPKI and aggregate improvement figures are not directly interchangeable. Differences may arise from ROI selection, trace processing, simulator settings, and the smaller benchmark subset. The project reproduces a consistent improvement trend, not an exact numerical replication of the full paper.
 

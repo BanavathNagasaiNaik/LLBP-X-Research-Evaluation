@@ -131,7 +131,7 @@ Arithmetic mean of **per-workload** MPKI reductions across five workloads:
 
 The five timing-aware LLBP-X runs collectively recorded **145,125 fewer ROI branch mispredictions** than the corresponding LLBP runs. The default adaptation threshold 7 had lower MPKI than threshold 9 for each of the five tested traces.
 
-These are simulated branch-prediction metrics, **not** CPU performance or energy improvements. The original-paper Table I reference values used in `documentation/report/04_results.md` must be verified against the source paper before submission.
+These are simulated branch-prediction metrics, **not** CPU performance or energy improvements. The original-paper Table I reference values used in `documentation/report/04_results.md` have been verified against the original HPCA 2026 paper (DOI: 10.1109/HPCA68181.2026.11408567).
 
 ## Reproduction caveats
 
