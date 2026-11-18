@@ -1,3 +1,45 @@
+# LLBP-X Research Evaluation
+
+This repository extends the original LLBP-X research artifact with a five-benchmark experimental evaluation, predictor configuration comparisons, analysis scripts, and research documentation.
+
+**Original authors repository:** https://github.com/dhschall/LLBP-X
+
+## Research Contributions
+
+- Evaluated five benchmarks: Kafka, TPCC, NodeApp, Spring, and Tomcat.
+- Completed 20 zero-latency and 10 timing-aware simulations.
+- Compared TAGE-SC-L, LLBP, LLBP-X, and a threshold-9 variant.
+- Analyzed prediction accuracy using ROI MPKI and branch mispredictions.
+- Generated experimental graphs and documented the methodology.
+
+## Key Results
+
+| Metric | Result |
+|---|---:|
+| Zero-latency mean MPKI reduction vs LLBP | 5.36% |
+| Zero-latency mean MPKI reduction vs TAGE-SC-L | 16.95% |
+| Timing-aware mean MPKI reduction vs LLBP | 5.25% |
+| Timing-aware mispredictions avoided | 145,125 |
+
+These are branch prediction accuracy results, not measured processor speedups.
+
+## Research Documentation
+
+- [Reproducibility Guide](documentation/reproducibility/README.md)
+- [Research Methodology](documentation/report/03_methodology.md)
+- [Experimental Results](documentation/report/04_results.md)
+- [Conclusion](documentation/report/05_conclusion.md)
+- [Research Presentation](documentation/presentation/LLBPX_Research_Presentation.pptx)
+- [Five-Benchmark Results](analysis/data/roi_results_5bench.csv)
+
+---
+
+## Original LLBP-X Artifact Documentation
+
+The following documentation is retained from the original authors.
+
+---
+
 # LLBP-X: The Last-Level Branch Predictor Revisited Artifact
 
 <p align="left">
