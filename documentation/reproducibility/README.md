@@ -140,3 +140,37 @@ These are simulated branch-prediction metrics, **not** CPU performance or energy
 - Published and locally measured MPKI may differ because of setup and measurement details.
 - Upstream `scripts/eval_all.sh` and `scripts/eval_benchmarks.sh` target the broader upstream workflow, not exactly this project's 30-run matrix.
 - Preserve upstream attribution and licenses when publishing; do not upload large traces, build artifacts, or temporary backups.
+
+## Five-Benchmark Result Extraction
+
+Run from the repository root:
+
+    python3 analysis/extract_5bench.py
+
+The extractor generates:
+
+- zero_5bench_candidate.csv: 20 zero-latency records.
+- timing_5bench_candidate.csv: 9 timing-aware records.
+
+All 20 zero-latency records match the published CSV.
+Nine timing-aware records match their saved simulator logs.
+
+### Missing Tomcat Timing Log
+
+The file results/step10/timing/tomcat/llbpx-timing_terminal.log
+is empty.
+
+The published CSV records:
+
+- ROI instructions: 199999995
+- ROI mispredictions: 627815
+- ROI MPKI: 3.139075
+
+These values are arithmetically consistent, but the original
+simulator output is unavailable for independent verification.
+
+The extractor reports this configuration as UNVERIFIED and
+excludes it from the candidate CSV.
+
+The published timing-aware CSV retains 10 recorded results,
+but only 9 can currently be reproduced from saved logs.
